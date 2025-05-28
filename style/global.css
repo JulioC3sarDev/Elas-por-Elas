@@ -1,0 +1,53 @@
+:root{
+    --branco: #ffffff;
+    --roxo: #2A1450;
+}
+
+@font-face{
+    font-family: 'Varela';
+    src: url(../assets/fontes/Geologica,Varela/Varela/Varela-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Varela';
+  text-decoration: none;
+  max-width: 1920px;
+}
+
+nav {
+  background: #2A1450;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+nav h1 {
+  margin: 0;
+  color: var(--branco);
+  padding: 0.2rem 0 0 2.5rem ;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#descricao, #ajuda {
+  background: transparent;
+  border: 0;
+  color: var(--branco);
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: normal;
+  transition: 0.4s ease-in-out;
+}
+
+#descricao:active{
+    transform: scale(0.45);
+}
+
+#ajuda:active{
+    transform: scale(0.45);
+}

@@ -1,0 +1,45 @@
+@import url(../style/global.css);
+
+body {
+}
+
+main {
+  max-width: 1500px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+span,
+input {
+  font-family: "Varela";
+}
+
+h1 {
+  font-size: 35px;
+}
+
+#denuncia-descricao input {
+  margin: 30px;
+  padding: 10px 0px 90px 10px;
+  background-color: var(--roxo);
+  border: none;
+  border-radius: 15px;
+}
+
+#denuncia-descricao input::placeholder {
+    color: var(--branco);
+}
+
+#input-grid input[type="file"] {
+  color: transparent;
+}
+
+#input-grid {
+  display: flex;
+  flex-direction: row;
+}

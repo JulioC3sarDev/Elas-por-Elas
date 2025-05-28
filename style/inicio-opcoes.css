@@ -1,0 +1,50 @@
+@import url(../style/global.css);
+
+
+.background{
+    position: relative;
+    max-width: 100%;
+    top: 6.3rem;
+}
+
+.boas-vindas{
+    position: absolute;
+    top: 9rem;
+    padding: 0 0 0 4rem;
+    color: var(--roxo);
+    font-size: 2rem;
+}
+
+.boas-vindas h1,h2{
+    font-weight: normal;
+}
+
+section{
+    position: relative;
+}
+
+.opcoes{
+   display: flex;
+   position: absolute;
+   top: -23rem;
+   gap: 5rem;
+   left: 14.5rem;
+}
+
+.opcao{
+    background: var(--roxo);
+    padding: 2rem 2rem;
+    border-radius: 3rem;
+    font-size: 3rem;
+    width: 40rem;
+    text-align: center;
+}
+
+.opcao h4{
+    font-weight: normal;
+}
+
+.opcao a{
+    text-decoration: none;
+    color: var(--branco);
+}

@@ -1,0 +1,92 @@
+@import url(../style/global.css);
+
+main{
+    background-color: var(--roxo);
+    display: flex;
+    position: relative;
+}
+
+.background{
+    max-width: 44%;
+    height: 51.55rem;
+}
+
+.form-container{
+    position: absolute;
+    left: 50rem;
+    background-color: var(--branco);
+    display: flex;
+    width: 58.3%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3rem 0 0 0;
+}
+
+form {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+form h2 {
+    color: #2A1450;
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 20px 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+}
+
+form input {
+    width: 90%;
+    padding: 1.3rem 0 1rem 3rem;
+    border: 2px solid #2A1450;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+        color: #2A1450;
+    }
+
+.container-botoes{
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 1rem;
+}
+
+.container-botoes button {
+    background-color: #2A1450;
+    font-size: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    padding: 1.2rem 4rem;
+    color: #ffff;
+    border-radius: 5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botoes:hover {
+    background-color: #3c0a68;
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-evenly;
+}
+
+.social-icons img {
+    width: 2rem;
+}
