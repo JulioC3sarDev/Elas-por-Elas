@@ -1,19 +1,73 @@
 @import url(../style/global.css);
 
-main img{
-    display: block;
+main{
+    background-color: var(--roxo);
+}
+
+.background{
     position: relative;
-    width: 100%;
-    height: 51.35rem;
+    max-width: 100%;
+    height:52.09rem;
+    opacity: 70%;
 }
 
 main h1{
     position: absolute;
-    top: 16rem;
-    font-size: 2rem;
-    width: 80rem;
+    top: 14rem;
+    left: 15rem;
+    font-size: 2.5rem;
+    width: 90rem;
     text-align: justify;
     color: var(--branco);
-    padding: 0 0 0 4rem;
-    opacity: 90%;
+    opacity: 100%;
+    font-weight: normal;
+}
+
+.autores{
+    list-style-type: none;
+    text-align: start;
+}
+
+#qr-code{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+footer{
+    background: var(--roxo);
+    text-align: center;
+    justify-content: center;
+    padding: 4rem 0 0 0 ;
+}
+
+.footer{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 16.5rem;
+    color: var(--branco);
+}
+
+.footer  img{
+    padding: 0 0 2rem 0rem;
+}
+
+#p_footer{
+    color: var(--branco);
+    margin: 0;
+    padding: 1.5rem;
+}
+
+#p_footer a{
+    color: var(--branco);
+    text-decoration: none;
+    font-size: none;
+}
+
+hr{
+    width: 65%;
+    height: 1px;
+    border: none;
+    background-color: var(--branco);
+    margin:0 auto;
 }
