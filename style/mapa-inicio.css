@@ -1,0 +1,111 @@
+:root{
+    --branco: #ffffff;
+    --roxo: #2A1450;
+}
+
+@font-face{
+    font-family: 'Varela';
+    src: url(../assets/fontes/Geologica,Varela/Varela/Varela-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Varela';
+  text-decoration: none;
+}
+
+main{
+    position: relative;
+
+}
+
+nav, .opcoes{
+    position: relative;
+    z-index: 1;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0rem 2rem 0 2rem;
+    height: 57.3rem;
+    background-color: var(--roxo);
+    width: 2rem;
+}
+
+nav img{
+    width: 2.5rem;
+    margin: 2rem 0 0 0;
+}
+
+.opcoes{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-items: center;
+    top: -55.5rem;
+    left: 7.5rem;
+    background-color: var(--branco);
+    padding: 3rem 3rem 2rem 3rem;
+    gap: 2rem;
+    border-radius: 1rem;
+}
+
+.opcoes input{
+    border-radius: 2rem;
+    border: 2px solid;
+    padding: 1rem;
+    color: var(--roxo);
+    font-size: 1.2rem;
+}
+
+input::placeholder{
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--roxo);
+}
+
+.opcoes h2{
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--roxo);
+}
+
+.delegacias{
+    display: flex;
+    justify-content: start;
+    width: 27rem;
+    gap: 1.5rem;
+}
+
+.delegacias img{
+    width: 3.2rem;
+}
+
+.delegacias p{
+    width: 28rem;
+    font-size: 1.05rem;
+    color: var(--roxo);
+}
+
+#map{
+    position: fixed;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#localizacao{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.8rem 1.2rem;
+    background-color: var(--roxo);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}

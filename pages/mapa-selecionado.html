@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elas por Elas</title>
+  <link rel="stylesheet" href="../style/mapa-selecionado.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+</head>
+
+<body>
+
+    <div id="map">
+    </div>
+
+    <header>
+      <nav>
+        <a id="voltar" href="../pages/mapa-inicio.html"><img src="../assets/back.png" alt=""></a>
+        <a href="../pages/inicio-opcoes.html"><img src="../assets/botão_inicio.png" alt=""></a>
+        <a href=""><img src="../assets/botão_salvar.png" alt=""></a>
+        <a href=""><img src="../assets/botão_recente.png" alt=""></a>
+      </nav>
+    </header>
+
+    <main>
+      
+        <input type="text" id="search" placeholder="Pesquise Aqui">
+          
+        <img class="del_img" src="../assets/delegacia.png" alt="">
+        
+        <div class="conteudo">
+          <h2>Delegacia da Mulher</h2>
+
+          <div class="del_escolhida">
+            <span><img src="../assets/location.png" alt=""></span>
+            <span class="aiai"><img src="../assets/telephone.png" alt=""></span>
+            <span><img src="../assets/bookmark.png" alt=""></span>
+            <span><img src="../assets/share.png" alt=""></span>
+          </div>
+
+          <div class="dados">
+            <h3>Praça do Campo Santo, S/N - Santo Amaro, Recife - PE, 50100-160</h3>
+            <h3>Aberto 24 horas - policiacivil.pe.gov.br</h3>
+            <h3 class="telefone">(81) 3184-3352</h3>
+          </div>
+        </div>
+
+    </main>
+
+    <button id="localizacao">Minha Localização</button>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+    <script src="../script/mapa.js"></script>
+    <script src="../script/mapa-selecionado.js"></script>
+
+</body>
+
+</html>
