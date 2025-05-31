@@ -1,22 +1,22 @@
 @import url(../style/mapa-inicio.css);
 
 #voltar{
-    padding: 1rem;
     background: var(--branco);
-    border-radius: 5rem;
     margin: 1rem 0 0 0;
+    padding: 1rem;
+    border-radius: 0.3rem;
 }
 
 #voltar img{
     margin: 0;
     align-items: center;
-    width: 2rem;
+    width: 1.5rem;
 }
 
 main{
     position: absolute;
     top: 3rem;
-    left: 9rem;
+    left: 7.5rem;
     width: 30rem;
 }
 
@@ -72,14 +72,25 @@ h2{
     font-weight: normal
 }
 
+.tel{
+    cursor: pointer;
+}
+
 .telefone{
     opacity: 0;
+    transition: 0.2s ease-in-out;
+}
+
+.conteudo{
+    transition: 0.2s ease-in-out;
 }
 
 .telefone.ativar{
     opacity: 1;
+    transition: 0.2s ease-in-out;
 }
 
 .conteudo.ativar{
     padding: 1rem 2rem 1rem 2rem;
+    transition: 0.2s ease-in-out;
 }

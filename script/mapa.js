@@ -1,4 +1,3 @@
-// Função para gerar coordenadas aleatórias em Recife (ajuste se quiser)
 function getRandomLatLng() {
   const minLat = -8.15;
   const maxLat = -7.95;
@@ -20,7 +19,6 @@ L.tileLayer('https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.{ext}'
   ext: 'png'
 }).addTo(map);
 
-
 const btnLocate = document.getElementById('localizacao');
 
 btnLocate.addEventListener('click', () => {
@@ -30,7 +28,7 @@ btnLocate.addEventListener('click', () => {
         const lat = pos.coords.latitude;
         const lon = pos.coords.longitude;
 
-        marker = L.marker([lat, lon]).addTo(map).bindPopup('Você está aqui 📍').openPopup();
+        marker = L.marker([lat, lon]).addTo(map).bindPopup('Você está aqui').openPopup();
 
         map.setView([lat, lon], 16);
       },
