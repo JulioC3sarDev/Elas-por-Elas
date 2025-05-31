@@ -1,15 +1,16 @@
 @import url(../style/global.css);
 
-body {
-}
-
 main {
   max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
 }
 
 form {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 
 h1,
@@ -23,23 +24,129 @@ h1 {
   font-size: 35px;
 }
 
-#denuncia-descricao input {
-  margin: 30px;
-  padding: 10px 0px 90px 10px;
+h2,
+span {
+  color: var(--roxo);
+}
+
+#denuncia {
+  margin-bottom: 20px;
+  color: var(--roxo);
+}
+
+#denuncia > hr {
+  width: 60%;
+}
+
+#denuncia-descricao input[type="text"] {
+  width: 55%;
+  padding: 10px 10px 90px 10px;
   background-color: var(--roxo);
   border: none;
   border-radius: 15px;
+  color: var(--branco);
+  font-family: "Varela";
+  font-size: 17px;
 }
 
-#denuncia-descricao input::placeholder {
-    color: var(--branco);
+#denuncia-descricao input[type="text"]::placeholder {
+  color: var(--branco);
+  font-family: "Varela";
 }
 
-#input-grid input[type="file"] {
-  color: transparent;
+#denuncia-descricao button[type="submit"],
+#anexo button[type="submit"] {
+  padding: 10px 20px;
+  font-family: "Varela";
+  cursor: pointer;
+  align-self: flex-start;
+  margin-top: 10px;
+}
+
+#anexo h2 {
+  margin-bottom: 5px;
+}
+
+#anexo span {
+  margin-bottom: 15px;
+  display: inline-block;
 }
 
 #input-grid {
   display: flex;
   flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+#background {
+  width: 45%;
+  object-fit: cover;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.custum-file-upload {
+  height: 190px;
+  width: 195px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  cursor: pointer;
+  border: 2px dashed #cacaca;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 48px 35px -48px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.custum-file-upload .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custum-file-upload .icon svg {
+  height: 80px;
+  fill: rgba(75, 85, 99, 1);
+}
+
+.custum-file-upload .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custum-file-upload .text span {
+  font-weight: 400;
+  color: rgba(75, 85, 99, 1);
+  font-family: "Varela";
+}
+
+.custum-file-upload input[type="file"] {
+  display: none;
+}
+
+button {
+  background-color: var(--roxo);
+  color: var(--branco);
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-family: "Varela";
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
 }
