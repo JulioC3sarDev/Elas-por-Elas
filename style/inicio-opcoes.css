@@ -27,7 +27,7 @@ section{
    position: absolute;
    top: -23rem;
    gap: 5rem;
-   left: 14.5rem;
+   left: 8rem;
 }
 
 .opcao{
@@ -35,7 +35,7 @@ section{
     padding: 2.5rem 3rem;
     border-radius: 3rem;
     font-size: 4rem;
-    width: 40rem;
+    width: 44rem;
     text-align: center;
 }
 
