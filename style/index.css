@@ -1,5 +1,47 @@
 @import url(../style/global.css);
 
+#chance_language li{
+    list-style-type: none;
+}
+
+.dropdown{
+    width: 4rem;
+}
+
+.dropdown img{
+    margin: 0.4rem 0 0 0;
+}
+
+.dropdown button{
+    background-color: transparent;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0rem 0.5rem 0 0.5rem;
+}
+
+.dropdown-menu{
+    position: absolute;
+    width: 4rem;
+    background-color: var(--branco);
+    border-radius: 0.5rem;
+    padding: 0rem 0.5rem;
+    opacity: 0;
+    transform: translateY(-1rem);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-menu img:hover{
+   box-shadow: 0 2px 2px var(--roxo);
+}
+
+.showMenu{
+    opacity: 1;
+    transform: translateY(0);
+    width: 4rem;
+    background-color: var(--branco);
+    padding: 0rem 0.5rem 0 0.5rem;
+    border-radius: 0.5rem;
+}
 
 nav{
     background: var(--roxo);
@@ -15,6 +57,12 @@ nav h1{
     padding: 0.2rem 0 0 2.5rem ;
     font-size: 2rem;
     font-weight: bold;
+}
+
+.botoes{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
 
 #login{
@@ -34,6 +82,7 @@ nav h1{
     border-radius: 0.6rem;
     padding: 0.4rem;
     transition: 0.3s ease-in-out;
+    background-color: var(--branco);
 }
 
 #denuncia:active{
@@ -51,7 +100,7 @@ section img{
     top: 5.9rem;
     border-radius: 0 5rem 0 0;
     background-color: var(--roxo);
-    padding: 12rem 3rem 7.25rem 3rem;
+    padding: 12rem 3rem 9.1rem 3rem;
 }
 
 .resumo p{
