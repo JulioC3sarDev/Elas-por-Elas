@@ -40,21 +40,26 @@ nav h1{
     transform: scale(0.45);
 }
 
-Main{
-    position: relative;
-}
-
 section img{
     width: 100%;
+    object-fit: cover;
+    height: 52rem;
 }
 
-#resumo{
+.resumo{
     position: absolute;
-    top: 10rem;
-    left: 4rem;
+    top: 5.9rem;
+    border-radius: 0 5rem 0 0;
+    background-color: var(--roxo);
+    padding: 12rem 3rem 7.25rem 3rem;
+}
+
+.resumo p{
     text-align: justify;
-    width: 50rem;
-    font-size: 2rem;
+    width: 55rem;
+    height: 32.7rem;
+    border-radius: 0 3rem 0 0;
+    font-size: 1.7rem;
     color: var(--branco);
 }
 
@@ -83,11 +88,17 @@ section img{
 .autores{
     list-style-type: none;
     text-align: start;
+    font-size: 1.3rem;
 }
 
 #qr-code{
     text-decoration: none;
     text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+#midia{
+    font-size: 1.3rem;
 }
 
 footer{
@@ -127,6 +138,13 @@ hr{
     border: none;
     background-color: var(--branco);
     margin:0 auto;
+}
+
+.resumo{
+    opacity: 0;
+    filter: blur(15px);
+    transition: all 0.5s;
+    transform: translateX(-100%);
 }
 
 .topicos-principal{
