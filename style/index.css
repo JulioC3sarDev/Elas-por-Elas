@@ -31,7 +31,8 @@
 }
 
 .dropdown-menu img:hover{
-   box-shadow: 0 2px 2px var(--roxo);
+   background-color: var(--roxo);
+   border-radius: 0.5rem;
 }
 
 .showMenu{
