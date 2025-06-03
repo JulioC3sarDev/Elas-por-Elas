@@ -17,6 +17,7 @@
     border: none;
     border-radius: 0.5rem;
     padding: 0rem 0.5rem 0 0.5rem;
+    cursor: pointer;
 }
 
 .dropdown-menu{
@@ -72,6 +73,7 @@ nav h1{
     border: 0;
     font-size: 1.5rem;
     transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 #login:active{
@@ -84,6 +86,7 @@ nav h1{
     padding: 0.4rem;
     transition: 0.3s ease-in-out;
     background-color: var(--branco);
+    cursor: pointer;
 }
 
 #denuncia:active{
