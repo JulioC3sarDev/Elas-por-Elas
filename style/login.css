@@ -65,12 +65,12 @@ input::placeholder {
 }
 
 .container-botoes button {
-    background-color: #2A1450;
+    background-color: var(--roxo);
     font-size: 1rem;
     right: 1rem;
     cursor: pointer;
     padding: 1.2rem 4rem;
-    color: #ffff;
+    color: var(--branco);
     border-radius: 5rem;
     font-size: 1.2rem;
     cursor: pointer;
@@ -79,7 +79,7 @@ input::placeholder {
 
 
 .botoes:hover {
-    background-color: #3c0a68;
+    background-color: var(--roxo);
 }
 
 .social-icons {
