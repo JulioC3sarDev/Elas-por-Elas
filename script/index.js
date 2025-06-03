@@ -4,7 +4,7 @@ const sec = document.querySelectorAll(".topicos-principal")
 const obs2 = new IntersectionObserver ((ol) => {
     console.log(ol);
     ol.forEach((entry2) => {
-        if(entry2.isIntersecting){
+        if(entry2.isIntersecting === true){
             entry2.target.classList.add('show');
         }
     });

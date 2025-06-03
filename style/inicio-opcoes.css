@@ -3,7 +3,7 @@
 .background{
     position: relative;
     width: 100%;
-    top: 6.3rem;
+    top: 4rem;
 }
 
 .boas-vindas{
@@ -46,4 +46,44 @@ section{
 .opcao a{
     text-decoration: none;
     color: var(--branco);
+}
+
+
+footer{
+    background: var(--roxo);
+    text-align: center;
+    justify-content: center;
+    padding: 4rem 0 0 0 ;
+}
+
+.footer{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 16.5rem;
+    color: var(--branco);
+}
+
+.footer  img{
+    padding: 0 0 2rem 0rem;
+}
+
+#p_footer{
+    color: var(--branco);
+    margin: 0;
+    padding: 1.5rem;
+}
+
+#p_footer a{
+    color: var(--branco);
+    text-decoration: none;
+    font-size: none;
+}
+
+hr{
+    width: 65%;
+    height: 1px;
+    border: none;
+    background-color: var(--branco);
+    margin:0 auto;
 }
