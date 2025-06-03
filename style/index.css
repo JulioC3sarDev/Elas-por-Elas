@@ -4,44 +4,33 @@
     list-style-type: none;
 }
 
-.dropdown{
-    width: 4rem;
+.dropdown  img{
+    width: 3.2rem;
 }
 
-.dropdown img{
-    margin: 0.4rem 0 0 0;
+.dropdown-menu img{
+    background-color: var(--branco);
+    border-radius: 0.5rem;
 }
 
 .dropdown button{
     background-color: transparent;
     border: none;
     border-radius: 0.5rem;
-    padding: 0rem 0.5rem 0 0rem;
     cursor: pointer;
 }
 
 .dropdown-menu{
     position: absolute;
-    width: 4rem;
-    background-color: var(--branco);
+    width: 3.2rem;
     border-radius: 0.5rem;
     opacity: 0;
     transform: translateY(-1rem);
-    padding: 0rem 0.2rem 0 0.2rem;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
-
-.dropdown-menu img:hover{
-   background-color: var(--roxo);
-   border-radius: 0.5rem;
-}
-
 .showMenu{
     opacity: 1;
     transform: translateY(0);
-    width: 4rem;
-    background-color: var(--branco);
-    padding: 0rem 0.2rem 0 0.2rem;
     border-radius: 0.5rem;
 }
 
@@ -50,7 +39,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.7rem;
+    padding: 1rem;
 }
 
 nav h1{
@@ -83,7 +72,7 @@ nav h1{
 #denuncia{
     font-size: 1.4rem;
     border-radius: 0.6rem;
-    padding: 0.4rem;
+    padding: 0.35rem;
     transition: 0.3s ease-in-out;
     background-color: var(--branco);
     cursor: pointer;
@@ -112,7 +101,7 @@ section img{
 .resumo p{
     width: 55rem;
     border-radius: 0 3rem 0 0;
-    font-size: 7rem;
+    font-size: 6rem;
     color: var(--branco);
     font-weight: bold;
 }
