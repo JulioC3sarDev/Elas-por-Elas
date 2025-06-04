@@ -1,3 +1,5 @@
+@import url(../style/mapa-inicio.css);
+
 :root{
     --branco: #ffffff;
     --roxo: #2A1450;
@@ -8,100 +10,39 @@
     src: url(../assets/fontes/Geologica,Varela/Varela/Varela-Regular.ttf);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'Varela';
-  text-decoration: none;
+#voltar{
+    background: var(--branco);
+    margin: 1rem 0 0 0;
+    padding: 1rem;
+    border-radius: 0.3rem;
 }
 
-nav{
-    display: flex;
-    flex-direction: column;
+#voltar img{
+    margin: 0;
     align-items: center;
-    padding: 0rem 2rem 0 2rem;
-    height: 57.3rem;
-    background-color: var(--roxo);
-    width: 2rem;
-}
-nav img{
-    width: 2.5rem;
-    margin: 2rem 0 0 0;
+    width: 1.5rem;
 }
 
-.definir-rota{
+.rota{
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    width: 18%;
-    height: 20%;
-    justify-content: center;
-    align-items: center;
-    background-color:var(--roxo);
-    border-radius: 3rem;
-    top: 6rem;
-    left: 8.5rem;
-    
-}
-
- .definir-rota input {
-  margin: 0.5rem 0;
-  padding: 0.5rem;
-  border-radius: 1rem;
-  border: none;
-  width: 60%;
-}
-.definir-rota input::placeholder {
-  color: var(--roxo);
-}
-
-.icone img {
-  font-size: 1.2rem;
-  min-width: 24px;
-  text-align: center;
-  max-width: 2.5rem;
-}
-
-.opcoes{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    justify-items: center;
-    top: 12rem;
-    left: 3rem;
+    border-radius: 1rem;
+    top: -55rem;
     background-color: var(--branco);
-    padding: 3rem 3rem 2rem 3rem;
-    gap: 2rem;
+    width: 35rem;
+    left: 7.5rem;
+    height: 50rem;
+}
+
+.endereço{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--roxo);
+    width: 30rem;
+    height: 14rem;
+    margin: 3.5rem 2rem 5rem 2.5rem;
     border-radius: 1rem;
 }
 
-.opcoes input{
-    border-radius: 2rem;
-    border: 2px solid;
-    padding: 1rem;
-    color: var(--roxo);
-    font-size: 1.2rem;
-}
-
-.opcoes h2{
-    text-align: start;
-    font-size: 1.7rem;
-    color: var(--roxo);
-}
-
-.carros{
-    display: flex;
-    justify-content: start;
-    width: 27rem;
-    gap: 1.5rem;
-}
-
-.carros img{
-    width: 3.2rem;
-}
-
-.carros p{
-    width: 28rem;
-    font-size: 1.05rem;
-    color: var(--roxo);
+.endereço p{
+    color: var(--branco);
 }
