@@ -1,36 +1,47 @@
 @import url(../style/global.css);
 
-main{
-    background-color: var(--roxo);
+body{
+    background-image: url(../assets/back_ajuda.png);
+    background-size: 139rem auto;
+    background-repeat: no-repeat;
+    
 }
 
-.background{
-    position: relative;
-    max-width: 100%;
-    height:52.09rem;
-    opacity: 70%;
+nav{
+    background-color: var(--transparente);
 }
 
-main h1{
-    position: absolute;
-    top: 14rem;
-    left: 15rem;
-    font-size: 2.5rem;
+.principal{
+    opacity: 0;
+    filter: blur(15px);
+    transition: all 0.5s;
+}
+
+.principal h1{
+    padding: 2rem;
+    justify-self: center;
+    font-size: 2rem;
     width: 90rem;
     text-align: justify;
+    font-weight: bold;
     color: var(--branco);
-    opacity: 100%;
-    font-weight: normal;
 }
+
 
 .autores{
     list-style-type: none;
     text-align: start;
+    font-size: 1.3rem;
 }
 
 #qr-code{
     text-decoration: none;
     text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+#midia{
+    font-size: 1.3rem;
 }
 
 footer{
@@ -38,6 +49,9 @@ footer{
     text-align: center;
     justify-content: center;
     padding: 4rem 0 0 0 ;
+    opacity: 0;
+    transition: all 2s; 
+    filter: blur(15px);
 }
 
 .footer{
@@ -46,6 +60,7 @@ footer{
     justify-content: center;
     gap: 16.5rem;
     color: var(--branco);
+
 }
 
 .footer  img{
@@ -70,4 +85,10 @@ hr{
     border: none;
     background-color: var(--branco);
     margin:0 auto;
+}
+
+.show{
+    opacity: 1;
+    transition: all 1.5s; 
+    filter: blur(0);
 }

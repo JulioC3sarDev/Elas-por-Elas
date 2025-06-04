@@ -1,12 +1,45 @@
 @import url(../style/global.css);
 
+#chance_language li{
+    list-style-type: none;
+}
+
+.dropdown  img{
+    width: 3.2rem;
+}
+
+.dropdown-menu img{
+    background-color: var(--branco);
+    border-radius: 0.5rem;
+}
+
+.dropdown button{
+    background-color: transparent;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.dropdown-menu{
+    position: absolute;
+    width: 3.2rem;
+    border-radius: 0.5rem;
+    opacity: 0;
+    transform: translateY(-1rem);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.showMenu{
+    opacity: 1;
+    transform: translateY(0);
+    border-radius: 0.5rem;
+}
 
 nav{
     background: var(--roxo);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 nav h1{
@@ -17,12 +50,19 @@ nav h1{
     font-weight: bold;
 }
 
+.botoes{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
 #login{
     background: transparent;
     color: var(--branco);
     border: 0;
     font-size: 1.5rem;
     transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 #login:active{
@@ -32,8 +72,10 @@ nav h1{
 #denuncia{
     font-size: 1.4rem;
     border-radius: 0.6rem;
-    padding: 0.4rem;
+    padding: 0.35rem;
     transition: 0.3s ease-in-out;
+    background-color: var(--branco);
+    cursor: pointer;
 }
 
 #denuncia:active{
@@ -41,26 +83,27 @@ nav h1{
 }
 
 section img{
+    position: relative;
+    z-index: -1;
     width: 100%;
     object-fit: cover;
-    height: 52rem;
+    height: 53rem;
+    filter: blur(1px);
 }
 
 .resumo{
     position: absolute;
-    top: 5.9rem;
+    top: 1rem;
     border-radius: 0 5rem 0 0;
-    background-color: var(--roxo);
-    padding: 12rem 3rem 7.25rem 3rem;
+    padding: 12rem 3rem 9.1rem 3rem;
 }
 
 .resumo p{
-    text-align: justify;
     width: 55rem;
-    height: 32.7rem;
     border-radius: 0 3rem 0 0;
-    font-size: 1.7rem;
+    font-size: 6rem;
     color: var(--branco);
+    font-weight: bold;
 }
 
 .topicos-principal{
