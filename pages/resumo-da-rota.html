@@ -17,6 +17,7 @@
 
     <header>
       <nav>
+        <a id="voltar" href="../pages/mapa-selecionado.html"><img src="../assets/back.png" alt=""></a>
         <a href="../pages/inicio-opcoes.html"><img src="../assets/botão_inicio.png" alt=""></a>
         <a href=""><img src="../assets/botão_salvar.png" alt=""></a>
         <a href=""><img src="../assets/botão_recente.png" alt=""></a>
@@ -25,37 +26,20 @@
 
     <main>
       
-        <div class="definir-rota">
-          <div class="linha-input">
-              <span class="icone"><img src="../assets/loc atual.png" alt=""></span>
-              <input type="text" placeholder="local de partida" />
-            </div>
+     <div class="rota">
+      <div class="endereço">
+        <p>Rua Agameno Magalhães</p>
+        <p>Delegácia Rural</p>
+      </div>
 
-            <div class="linha-input">
-              <span class="icone"><img src="../assets/localizacao (3).png" alt=""></span>
-              <input type="text" placeholder="local de destino" />
-           
-         <ul class="opcoes">
-
-        <h2>Rotas mais rápidas</h2>
-          <li class="carros">
-          <img src="../assets/carros.png" alt="">
-          <p>via Av. Pan Nordestina
-          <br>praça do Campo Santo, S/N</p>
-          </li>
-        
-          <li class="carros">
-          <img src="../assets/carros.png" alt="">
-          <p>via Av. Pan Nordestina
-          <br>praça do Campo Santo, S/N</p>
-          </li>
-
-          <li class="carros">
-          <img src="../assets/carros.png" alt="">
-          <p>via Av. Pan Nordestina
-          <br>praça do Campo Santo, S/N</p>
-          </li>
-           </div>
+     </div>
 
 
     </main>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin="">
+    </script>
+    <script src="../script/rota.js"></script>
+</body>
