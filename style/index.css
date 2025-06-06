@@ -221,9 +221,13 @@ hr {
 
 @media (max-width: 764px) {
     
+    nav h1{
+        padding: 0;
+    }
+
     .resumo.show p{
         width: 100%;
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .dropdown{
@@ -249,6 +253,15 @@ hr {
     .topicos-principal {
         width: 90%;
         padding: 3rem 0;
+        
+    }
+
+    .topicos-principal h1{
+        font-size: 1.8rem;
+    }
+
+    .topicos-principal p{
+        font-size: 1.2rem;
     }
 
    
@@ -320,6 +333,11 @@ hr {
 
     footer{
         padding: 1rem 0 0 0; 
+        
+    }
+
+    footer li{
+        font-size: 1rem;
     }
 
     
