@@ -2,39 +2,49 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elas por Elas</title>
     <link rel="stylesheet" href="../style/index.css">
-    <title>Elas por elas</title>
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="../pages/inicio-opcoes.html"><h1>Elas por Elas</h1></a>
-            <div class="botoes">
-                <a href="../pages/login.html"><button id="login">Login</button></a>
-                <a href="../pages/denuncia-anonima.html"><Button id="denuncia">Denúncia Anônima</Button></a>
-                <a href="../pages/quem-somos-index.html"><button id="descricao">Quem somos</button></a>
-                <a href="../pages/ajuda.index.html"><button id="ajuda">Ajuda</button></a>
-                <div id="chance_language">
-                    <ul>
-                        <li class="dropdown">
-                            <button><img src="https://flagsapi.com/BR/flat/64.png" alt=""></button>
-                            <div class="dropdown-menu">
-                                <a href="../pages(us)/index.html"><img src="https://flagsapi.com/US/flat/64.png" alt=""></a>
-                            </div>
-                        </li>
-                    </ul>
+            <h1>Elas por Elas</h1>
+
+            <button class="hamburger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <div class="nav-links">
+                <div class="botoes">
+                    <a href="../pages/login.html"><button id="login">Login</button></a>
+                    <a href="../pages/denuncia-anonima.html"><button id="denuncia">Denúncia Anônima</button></a>
+                    <a href="../pages/quem-somos-index.html"><button id="descricao">Quem somos</button></a>
+                    <a href="../pages/ajuda.index.html"><button id="ajuda">Ajuda</button></a>
+                    <div id="chance_language">
+                        <ul>
+                            <li class="dropdown">
+                                <button><img src="https://flagsapi.com/BR/flat/64.png" alt="Bandeira do Brasil"></button>
+                                <div class="dropdown-menu">
+                                    <a href="../pages(us)/index.html"><img src="https://flagsapi.com/US/flat/64.png" alt="Bandeira dos EUA"></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
 
-    <Main>
+    <main>
         <section class="introducao">
-            <img src="../assets/background_elas.jpg" alt="">
+            <img src="../assets/background_elas.jpg" alt="Imagem de fundo com mulher em silhueta">
             <div class="resumo">
                 <p>
-                    <Strong>Elas por Elas</Strong> <br>sua força <br> sua segurança <br>a um toque
+                    <strong>Elas por Elas</strong> <br>sua força <br> sua segurança <br>a um toque
                 </p>
             </div>
         </section>
@@ -69,7 +79,6 @@
                 ajuda você a identificar onde buscar ajuda presencial de forma
                 rápida e segura, sempre priorizando sua proteção.
             </p>
-
         </section>
 
         <section class="topicos-principal">
@@ -81,39 +90,38 @@
                 violência sem colocar sua segurança em risco.
             </p>
         </section>
-
-    </Main>
+    </main>
 
     <footer>
         <div class="footer">
             <div class="autores">
                 <h4>Autores</h4>
                 <br>
-                <h5>
+                <ul>
                     <li>Gabriel Pereira</li>
                     <li>Júlio César</li>
-                    <li>Lucas Nasimento</li>
+                    <li>Lucas Nascimento</li>
                     <li>Maria Eduarda</li>
                     <li>Nathaly Ferreira</li>
-                </h5>
+                </ul>
             </div>
 
             <div id="qr-code">
                 <h4>Conheça nosso aplicativo, escaneie o QR code</h4>
-                <img src="../assets/qr_code.png" alt="">
+                <img src="../assets/qr_code.png" alt="QR Code para o aplicativo">
             </div>
 
             <div id="midia">
                 <h4>Mídia Social</h4>
-                <a href=""><img src="../assets/github.png" alt=""></a>
-                <a href=""><img src="../assets/linkedin.png" alt=""></a>
+                <a href="#"><img src="../assets/github.png" alt="Logo do GitHub"></a>
+                <a href="#"><img src="../assets/linkedin.png" alt="Logo do LinkedIn"></a>
             </div>
         </div>
 
         <hr>
 
         <p id="p_footer">
-            Copyright &copy 2025 |
+            Copyright &copy; 2025 |
             <a href="https://github.com/JulioC3sarDev/Elas-por-Elas">Link GitHub.</a>
             Todos os direitos reservados.
         </p>
@@ -122,5 +130,4 @@
     <script src="../script/global.js"></script>
     <script src="../script/index.js"></script>
 </body>
-
 </html>
