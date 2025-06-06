@@ -93,9 +93,9 @@ section img{
 
 .resumo{
     position: absolute;
-    top: 1rem;
+    top: 14rem;
+    left: 3.4rem;
     border-radius: 0 5rem 0 0;
-    padding: 12rem 3rem 9.1rem 3rem;
 }
 
 .resumo p{
@@ -202,4 +202,10 @@ hr{
     transition: all 2s; 
     filter: blur(0);
     transform: translateX(0);
+}
+
+@media(min-width:1200px){
+    .topicos-principal{
+        width: 60rem;
+    }
 }
