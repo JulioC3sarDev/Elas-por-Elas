@@ -2,39 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../style/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elas por Elas</title>
+    <link rel="stylesheet" href="../style/index.css">
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="../pages(us)/inicio-opcoes.html"><h1>Elas por Elas</h1></a>
-            <div class="botoes">
-                <a href="../pages(us)/login.html"><button id="login">Login</button></a>
-                <a href="../pages(us)/denuncia-anonima.html"><Button id="denuncia">Anonymous Report</Button></a>
-                <a href="../pages(us)/quem-somos-index.html"><button id="descricao">About us</button></a>
-                <a href="../pages(us)/ajuda.index.html"><button id="ajuda">Help</button></a>
-                <div id="chance_language">
-                    <ul>
-                        <li class="dropdown">
-                            <button><img src="https://flagsapi.com/US/flat/64.png" alt=""></button>
-                            <div class="dropdown-menu">
-                                <a href="../pages/index.html"><img src="https://flagsapi.com/BR/flat/64.png" alt=""></a>
-                            </div>
-                        </li>
-                    </ul>
+            <h1>Elas por Elas</h1>
+
+            <button class="hamburger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <div class="nav-links">
+                <div class="botoes">
+                    <a href="../pages(us)/login.html"><button id="login">Login</button></a>
+                    <a href="../pages(us)/denuncia-anonima.html"><button id="denuncia">Anonymous Report</button></a>
+                    <a href="../pages(us)/quem-somos-index.html"><button id="descricao">About Us</button></a>
+                    <a href="../pages(us)/ajuda.index.html"><button id="ajuda">Help</button></a>
+                    <div id="chance_language">
+                        <ul>
+                            <li class="dropdown">
+                                <button><img src="https://flagsapi.com/US/flat/64.png" alt="Flag of Brazil"></button>
+                                <div class="dropdown-menu">
+                                    <a href="../index.html"><img src="https://flagsapi.com/BR/flat/64.png" alt="Flag of the USA"></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
 
-    <Main>
+    <main>
         <section class="introducao">
-            <img src="../assets/background_elas.jpg" alt="">
+            <img src="../assets/background_elas.jpg" alt="Background image with a woman in silhouette">
             <div class="resumo">
                 <p>
-                    <Strong>Elas por Elas</Strong> <br>your strength <br> your security <br>a touch away
+                    <strong>Elas por Elas</strong> <br>your strength <br> your security <br>a touch away
                 </p>
             </div>
         </section>
@@ -49,65 +59,62 @@
                 any situation.
             </p>
         </section>
-
+        
         <section class="topicos-principal">
             <h1>Make quick reports</h1>
             <p>
                 We know that in urgent moments,
-                every second counts. Therefore, we offer a simple
-                and fast way to register reports, with just a few clicks.
+                every second counts. That's why we offer a simple
+                and fast way to file reports, with just a few clicks.
                 The process is direct, secure, and efficient, ensuring that your
                 voice is heard without complications.
             </p>
         </section>
 
-
         <section class="topicos-principal">
-              <h1>Find police stations closest to you</h1>
+            <h1>Find police stations nearest to you</h1>
             <p>
-                Easily find the police stations and support centers nearest
-                to your location. Our geolocation system
+                Easily find the police stations and support centers
+                closest to your location. Our geolocation system
                 helps you identify where to seek in-person help quickly
                 and safely, always prioritizing your protection.
             </p>
-
         </section>
 
         <section class="topicos-principal">
-              <h1>Report anonymously, if you don't feel comfortable</h1>
+            <h1>Report anonymously if you don't feel comfortable</h1>
             <p>
                 You have the right to report without exposing yourself.
-                If you prefer to keep your identity secret, we offer the
-                option of anonymous reporting. This way, you contribute to combating
+                If you prefer to keep your identity confidential, we offer the
+                option of anonymous reporting. This way, you can help combat
                 violence without putting your safety at risk.
             </p>
         </section>
-
-    </Main>
+    </main>
 
     <footer>
         <div class="footer">
             <div class="autores">
                 <h4>Authors</h4>
                 <br>
-                <h5>
+                <ul>
                     <li>Gabriel Pereira</li>
                     <li>Júlio César</li>
                     <li>Lucas Nascimento</li>
                     <li>Maria Eduarda</li>
                     <li>Nathaly Ferreira</li>
-                </h5>
+                </ul>
             </div>
 
             <div id="qr-code">
                 <h4>Discover our app, scan the QR code</h4>
-                <img src="../assets/qr_code.png" alt="">
+                <img src="../assets/qr_code.png" alt="QR Code for the application">
             </div>
 
             <div id="midia">
                 <h4>Social Media</h4>
-                <a href=""><img src="../assets/github.png" alt=""></a>
-                <a href=""><img src="../assets/linkedin.png" alt=""></a>
+                <a href="#"><img src="../assets/github.png" alt="GitHub Logo"></a>
+                <a href="#"><img src="../assets/linkedin.png" alt="LinkedIn Logo"></a>
             </div>
         </div>
 
@@ -123,5 +130,4 @@
     <script src="../script/global.js"></script>
     <script src="../script/index.js"></script>
 </body>
-
 </html>
