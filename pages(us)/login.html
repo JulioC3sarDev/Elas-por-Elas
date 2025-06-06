@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Elas por Elas</title>
   <link rel="stylesheet" href="../style/login.css" />
 </head>
+
 <body>
 
-   <header>
-     <nav>
-       <h1>Elas por Elas</h1>
-       <div class="botoes">
-         <a href="../pages(us)/ajuda.index.html"><button id="ajuda">Help</button></a>
-       </div>
-     </nav>
+  <header>
+    <nav>
+      <h1>Elas por Elas</h1>
+      <div class="botoes">
+        <a href="../pages/ajuda.index.html"><button id="ajuda">Help</button></a>
+      </div>
+    </nav>
   </header>
-  
+
   <main>
 
-    <img class ="background" src="../assets/background_login.png" alt="">
+    <img class="background" src="../assets/background_login.png" alt="Abstract background for the login page">
 
-    <div class="form-container">
+    <div class="form">
+      <div class="form-container">
+        <form action="../pages/index.html" method="post">
+          <h2>Login</h2>
+          <input type="email" placeholder="E-mail" />
+          <input type="password" placeholder="Password" />
 
-      <form action="../pages(us)/index.html" method="post">
-        <h2>Login</h2>
-        <input type="email" placeholder="E-mail"/>
-        <input type="password" placeholder="Password"/>
+          <div class="container-botoes">
+            <a href="../pages/inicio-opcoes.html"><button class="botoes" type="button">Sign In</button></a>
+            <a href="../pages/cadastro.html"><button class="botoes" type="button">Create account</button></a>
+          </div>
 
-        <div class="container-botoes">
-          <a href="../pages(us)/inicio-opcoes.html"><button class="botoes" type="button">Sign In</button></a>
-          <a href="../pages(us)/cadastro.html"><button class="botoes" type="button">Create account</button></a>
-        </div> 
-
-        <div class="social-icons">
-            <span><img src="../assets/facebook.png" alt=""></span> 
-            <span><img src="../assets/apple_logo.png" alt=""></span> 
-            <span><img src="../assets/google.png" alt=""></span> 
-        </div>
-      </form>
-      
+          <div class="social-icons">
+            <span><img src="../assets/facebook (1) 2.png" alt="Login with Facebook"></span>
+            <span><img src="../assets/apple (2) 1.png" alt="Login with Apple"></span>
+            <span><img src="../assets/google (1) 2.png" alt="Login with Google"></span>
+          </div>
+        </form>
+      </div>
     </div>
   </main>
 
