@@ -1,6 +1,5 @@
 @import url(../style/global.css);
 
-
 nav {
     background: var(--roxo);
     display: flex;
@@ -148,7 +147,7 @@ section.introducao img {
 footer {
     background: var(--roxo);
     text-align: center;
-    padding: 4rem 0 0 0 ;
+    padding: 4rem 0 0 0;
     color: var(--branco);
 }
 
@@ -163,11 +162,13 @@ footer {
     padding-bottom: 2rem;
 }
 
-.autores h4{
+.autores h4 {
     text-align: start;
 }
 
-.autores, #qr-code, #midia {
+.autores,
+#qr-code,
+#midia {
     font-size: 1.3rem;
 }
 
@@ -206,7 +207,7 @@ hr {
     border: none;
     cursor: pointer;
     padding: 0;
-    z-index: 20; 
+    z-index: 20;
 }
 
 .hamburger-menu .bar {
@@ -220,51 +221,51 @@ hr {
 
 
 @media (max-width: 764px) {
-    
-    nav h1{
+
+    nav h1 {
         padding: 0;
     }
 
-    .resumo.show p{
+    .resumo.show p {
         width: 100%;
         font-size: 4rem;
     }
 
-    .dropdown{
+    .dropdown {
         position: relative;
     }
 
     .dropdown-menu img {
         background-color: var(--transparente);
-        
+
     }
 
     .dropdown-menu {
         left: 3.5rem;
         top: -0.01rem;
         transform: translateX(-1rem);
-        
+
     }
 
-    .showMenu{
+    .showMenu {
         transform: translateX(0);
     }
-    
+
     .topicos-principal {
         width: 90%;
         padding: 3rem 0;
-        
+
     }
 
-    .topicos-principal h1{
+    .topicos-principal h1 {
         font-size: 1.8rem;
     }
 
-    .topicos-principal p{
+    .topicos-principal p {
         font-size: 1.2rem;
     }
 
-   
+
     .hamburger-menu {
         display: flex;
     }
@@ -273,16 +274,16 @@ hr {
         display: none;
         position: absolute;
         z-index: 1;
-        top: 100%; 
+        top: 100%;
         right: 0;
         background-color: var(--roxo);
         width: 35%;
         border-radius: 0 0 0 1rem;
     }
-    
-  
 
-    #login{
+
+
+    #login {
         background-color: var(--branco);
         color: var(--roxo);
         border-radius: 0.5rem;
@@ -292,29 +293,29 @@ hr {
         display: block;
     }
 
-    .botoes{
+    .botoes {
         gap: 0rem;
     }
-    
+
     .nav-links .botoes {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
         width: 100%;
         padding: 1rem 0;
     }
-    
+
     .nav-links .botoes a {
         width: 100%;
         text-align: center;
-        
+
     }
-    
+
     .nav-links .botoes a button {
         width: 90%;
         margin: 0.5rem 0;
-        color: var(--roxo); 
+        color: var(--roxo);
     }
-    
+
     .nav-links .botoes a #denuncia {
         border: 1px solid var(--roxo);
     }
@@ -331,22 +332,23 @@ hr {
         transform: rotate(-45deg) translate(0.5rem, -0.5rem);
     }
 
-    footer{
-        padding: 1rem 0 0 0; 
-        
+    footer {
+        padding: 1rem 0 0 0;
+
     }
 
-    footer li{
+    footer li {
         font-size: 1rem;
     }
 
-    
+
     .footer {
         flex-direction: column;
-        gap: 1rem;   
+        gap: 1rem;
     }
 
-    .autores h4,li{
+    .autores h4,
+    li {
         text-align: center;
     }
 }
