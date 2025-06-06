@@ -219,7 +219,7 @@ hr {
 }
 
 
-@media (max-width: 764px) {
+@media (max-width: 480px) {
     
     .resumo.show p{
         width: 100%;
