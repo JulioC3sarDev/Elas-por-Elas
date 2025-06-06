@@ -1,94 +1,124 @@
 @import url(../style/global.css);
 
-body{
-    background-image: url(../assets/back_ajuda.png);
-    background-size: 139rem auto;
-    background-repeat: no-repeat;
-    
+body {
+  background-image: url(../assets/back_ajuda.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
-nav{
-    background-color: var(--transparente);
+main {
+  padding: 1.3rem;
 }
 
-.principal{
-    opacity: 0;
-    filter: blur(15px);
-    transition: all 0.5s;
+nav {
+  background-color: var(--transparente);
 }
 
-.principal h1{
-    padding: 2rem;
-    justify-self: center;
-    font-size: 2rem;
-    width: 90rem;
-    text-align: justify;
-    font-weight: bold;
-    color: var(--branco);
+.principal {
+  opacity: 0;
+  filter: blur(15px);
+  transition: all 0.5s;
 }
 
+.principal p {
+  padding: 1rem;
+  font-size: 1.1rem;
+  max-width: 90rem;
+  width: 90%;
+  margin: 0 auto;
+  text-align: justify;
+  color: var(--branco);
+}
 
-.autores{
-    list-style-type: none;
+footer {
+  background: var(--roxo);
+  text-align: center;
+  padding: 4rem 0 0 0;
+  opacity: 0;
+  transition: all 2s;
+  filter: blur(15px);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  color: var(--branco);
+  padding: 0 1rem;
+}
+
+.autores {
+  list-style-type: none;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+#qr-code {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+
+#midia {
+  font-size: 1.3rem;
+}
+
+.footer img {
+  padding: 0 0 2rem 0rem;
+}
+
+hr {
+  width: 80%;
+  height: 1px;
+  border: none;
+  background-color: var(--branco);
+  margin: 0 auto;
+}
+
+#p_footer {
+  color: var(--branco);
+  margin: 0;
+  padding: 1.5rem;
+}
+
+#p_footer a {
+  color: var(--branco);
+  text-decoration: none;
+}
+
+.show {
+  opacity: 1;
+  transition: all 1.5s;
+  filter: blur(0);
+}
+
+@media (min-width: 768px) {
+  .principal p {
+    font-size: 1.5rem;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 6rem;
+  }
+
+  .autores {
     text-align: start;
-    font-size: 1.3rem;
-}
+  }
 
-#qr-code{
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1.3rem;
-}
-
-#midia{
-    font-size: 1.3rem;
-}
-
-footer{
-    background: var(--roxo);
-    text-align: center;
-    justify-content: center;
-    padding: 4rem 0 0 0 ;
-    opacity: 0;
-    transition: all 2s; 
-    filter: blur(15px);
-}
-
-.footer{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    gap: 16.5rem;
-    color: var(--branco);
-
-}
-
-.footer  img{
-    padding: 0 0 2rem 0rem;
-}
-
-#p_footer{
-    color: var(--branco);
-    margin: 0;
-    padding: 1.5rem;
-}
-
-#p_footer a{
-    color: var(--branco);
-    text-decoration: none;
-    font-size: none;
-}
-
-hr{
+  hr {
     width: 65%;
-    height: 1px;
-    border: none;
-    background-color: var(--branco);
-    margin:0 auto;
+  }
 }
 
-.show{
-    opacity: 1;
-    transition: all 1.5s; 
-    filter: blur(0);
+@media (min-width: 1200px) {
+  .footer {
+    gap: 12rem;
+  }
 }
