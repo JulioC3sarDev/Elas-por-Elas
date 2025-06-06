@@ -123,15 +123,21 @@ form button:hover {
 
   .form-container {
     position: absolute;
-    padding: 4rem;
+    padding: 2rem;
     top: 7rem;
-    left: 7rem;
+    left: 6.9rem;
     border-radius: 2rem;
     background-color: var(--branco);
   }
 
+  form input{
+    width: 20rem;
+  }
+
+
   .form-container h2 {
     margin: 0;
+    font-size: 2rem;
   }
 
 }
