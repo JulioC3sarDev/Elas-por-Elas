@@ -1,8 +1,15 @@
-const button = document.querySelectorAll(".button-faq");
+document.addEventListener("DOMContentLoaded", () => {
+  const allFaqItems = document.querySelectorAll(".faq-item");
 
-button.forEach((a) => {
-    a.addEventListener('click', () => {
-        const mostrar = a.nextElementSibling;
-        mostrar.classList.toggle("show")
-    })
-})
+  allFaqItems.forEach((item) => {
+    item.addEventListener("toggle", (event) => {
+      if (item.open) {
+        allFaqItems.forEach((otherItem) => {
+          if (otherItem !== item && otherItem.open) {
+            otherItem.open = false;
+          }
+        });
+      }
+    });
+  });
+});

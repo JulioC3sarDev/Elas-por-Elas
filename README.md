@@ -1,58 +1,52 @@
 # Elas por Elas
 
-**Um aplicativo dedicado à segurança e apoio de mulheres em situação de violência e insegurança.**
+*"Sua Força e Segurança a um toque de distância"*
 
-*Você não está sozinha, estamos aqui por você.*
+O **Elas por Elas** é uma plataforma digital dedicada a ser uma aliada na segurança feminina, oferecendo um ambiente seguro e acolhedor onde mulheres podem encontrar apoio, informação e recursos para combater a violência. O projeto foi idealizado e desenvolvido por estudantes de Análise e Desenvolvimento de Sistemas da UNIT PE.
 
-**Repositório do Projeto:** [https://github.com/JulioC3sarDev/Elas-por-Elas.git](https://github.com/JulioC3sarDev/Elas-por-Elas.git)
+![Ilustração de três mulheres com os punhos levantados em sinal de força.](assets/hero-illustration.png)
 
-## Sobre o Aplicativo
+## Sobre o Projeto
 
-**Elas por Elas** é uma aplicação criada com o propósito fundamental de garantir a segurança da mulher. Oferece um espaço acolhedor, projetado para escutar, apoiar e orientar. Cada funcionalidade foi pensada para que você se sinta segura e amparada em qualquer situação, oferecendo ajuda rápida, humana e eficiente.
+Nossa missão é conectar, proteger e fortalecer mulheres através da tecnologia. Acreditamos que, ao facilitar o acesso à ajuda e unir forças, podemos criar uma rede de proteção eficaz e solidária. A plataforma centraliza funcionalidades essenciais de segurança, permitindo que as usuárias ajam de forma rápida, segura e, se preferirem, anônima.
 
-Nosso objetivo é garantir sua segurança, liberdade e paz.
+## Funcionalidades Principais
 
-## Principais Funcionalidades (Conforme Design Original)
+O "Elas por Elas" conta com uma série de funcionalidades pensadas para garantir o amparo e a segurança de suas usuárias:
 
-* **Denúncias Rápidas e Simplificadas:**
-    * Sabemos que em momentos de urgência, cada segundo conta. Registre denúncias com poucos cliques.
-    * O processo é direto, seguro e eficiente, garantindo que sua voz seja ouvida sem complicações.
-* **Busque Delegacias Mais Próximas:**
-    * Encontre facilmente delegacias e centros de apoio mais próximos da sua localização.
-    * Nosso sistema de geolocalização ajuda você a identificar onde buscar ajuda presencial de forma rápida e segura, sempre priorizando sua proteção.
-* **Denuncie Anonimamente:**
-    * Você tem o direito de denunciar sem se expor.
-    * Caso prefira manter sua identidade em sigilo, oferecemos a opção de denúncia anônima.
-    * Contribua para combater a violência sem colocar sua segurança em risco.
-* **Aqui Você Está Protegida:**
-    * Um ambiente de confiança para que você se sinta segura para buscar ajuda e orientação.
-
-## Nosso Compromisso
-
-Acreditamos que toda mulher tem o direito à segurança e a uma vida livre de violência. **Elas por Elas** é mais que um aplicativo, é uma ferramenta de empoderamento e um canal de apoio.
-
----
+* **Denúncias Seguras**: Usuárias podem registrar ocorrências de forma identificada ou anônima, com a opção de anexar evidências como fotos, áudios e vídeos.
+* **Mapa de Postos Próximos**: Uma ferramenta de geolocalização, construída com a biblioteca Leaflet.js, que exibe as delegacias e centros de apoio mais próximos, facilitando a busca por ajuda presencial.
+* **Detalhes dos Postos de Apoio**: Informações completas sobre os postos, incluindo endereço, status de funcionamento (ex: "Aberto 24 horas"), site e opções como "Salvar Local" e "Ver Rotas".
+* **Sistema de Contas**: As usuárias podem criar uma conta para ter acesso a funcionalidades exclusivas ou utilizar os recursos de denúncia anônima sem a necessidade de login.
+* **Central de Ajuda (FAQ)**: Uma seção completa com respostas para as dúvidas mais comuns sobre o uso da plataforma, segurança de dados e funcionamento das denúncias.
+* **Suporte Multilíngue**: A interface está totalmente disponível em Português (pt-br) e Inglês (en), garantindo maior acessibilidade.
 
 ## Tecnologias Utilizadas
-* HTML
-* CSS
-* JavaScript
 
-## Como Executar o Projeto
-1.  Clone o repositório: `git clone https://github.com/JulioC3sarDev/Elas-por-Elas.git`
-2.  Navegue até o diretório do projeto: `cd Elas-por-Elas`
-3.  Abra o arquivo `index.html` (ou o arquivo HTML principal) em seu navegador.
+Este projeto foi construído utilizando tecnologias web modernas e focadas em uma experiência de usuário responsiva e acessível:
 
-## Como Contribuir
-Contribuições são bem-vindas! Se você deseja contribuir com o projeto, por favor:
-1.  Faça um fork do projeto ([https://github.com/JulioC3sarDev/Elas-por-Elas/fork](https://github.com/JulioC3sarDev/Elas-por-Elas/fork)).
-2.  Crie uma nova branch (`git checkout -b feature/nova-funcionalidade`).
-3.  Faça commit de suas alterações (`git commit -m 'Adiciona nova funcionalidade'`).
-4.  Faça push para a branch (`git push origin feature/nova-funcionalidade`).
-5.  Abra um Pull Request.
+* **HTML5**
+* **CSS3** (com variáveis, Flexbox e Grid Layout)
+* **JavaScript** (para interatividade e manipulação do DOM)
+* **Leaflet.js**: Biblioteca JavaScript para a criação de mapas interativos.
+* **Google Fonts**: A fonte "Poppins" foi utilizada para garantir um design limpo e legível.
 
-## Licença
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo `LICENSE` (se existente no repositório) para mais detalhes. (Nota: Adicione um arquivo LICENSE ao seu repositório se desejar especificar uma licença).
+## Autores
 
-## Contato
-* **Perfil GitHub:** [https://github.com/JulioC3sarDev](https://github.com/JulioC3sarDev)
+Este projeto foi concebido e desenvolvido com dedicação por uma equipe de estudantes de Análise e Desenvolvimento de Sistemas:
+
+* **Eduarda Santana**
+    * [LinkedIn](https://www.linkedin.com/in/eduarda-santana-6222b3326/)
+    * [GitHub](https://github.com/eduard4-sant)
+* **Gabriel Pereira**
+    * [LinkedIn](https://www.linkedin.com/in/gabriel-pereira0w/)
+    * [GitHub](https://github.com/Gabriel05-gif)
+* **Júlio César**
+    * [LinkedIn](https://www.linkedin.com/in/j%C3%BAlioc%C3%A9sarlk/)
+    * [GitHub](https://github.com/JulioC3sarDev)
+* **Lucas Nascimento**
+    * [LinkedIn](https://www.linkedin.com/in/lucas-nascimento-dev27/)
+    * [GitHub](https://github.com/LNS127)
+* **Nathaly Ferreira**
+    * [LinkedIn](https://www.linkedin.com/in/nathaly-ferreira-484704232/)
+    * [GitHub](https://github.com/FSPNathaly)

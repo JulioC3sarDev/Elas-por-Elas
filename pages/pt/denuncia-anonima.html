@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elas por Elas - Denúncia Anônima</title>
+  <link rel="stylesheet" href="../../style/global.css">
+  <link rel="stylesheet" href="../../style/index.css">
+  <link rel="stylesheet" href="../../style/denuncia.css">
+  <link rel="stylesheet" href="../../style/hamburguer.css">
+</head>
+
+<body>
+  <header id="cabecalho">
+    <div class="container">
+      <a href="../../index.html" class="logo">Elas por Elas</a>
+      <button id="hamburger-btn" aria-label="Abrir menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      <div id="menu-container">
+        <div class="navegacao-superior">
+          <a href="acessar-conta.html" class="botao-acessar" target="_blank">Acessar</a>
+          <nav id="navegacao-secundaria">
+            <ul>
+              <li><a href="denuncia-anonima.html">Denúncia Anônima</a></li>
+              <li><a href="quem-somos.html">Quem Somos</a></li>
+              <li class="idioma"><a href="#">pt-br</a> | <a href="../en/anonymous-report.html">en</a></li>
+              <li><a href="ajuda-deslogado.html"><img src="../../assets/icon-help.svg" alt="Ícone de Ajuda"></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo-principal">
+    <div class="container">
+      <form id="form-denuncia">
+        <h1>Denúncia Anônima</h1>
+        <div class="input-grupo">
+          <textarea id="descricao-denuncia" name="descricao-denuncia" rows="6" placeholder="Descreva aqui com o máximo de detalhes que conseguir..." required></textarea>
+        </div>
+        <h2>Anexe provas <span class="opcional">(opcional, é possível anexar fotos, áudios e vídeos)</span></h2>
+        <div id="anexos-container" class="anexos-container">
+          <label for="anexo-input" class="anexo-box anexo-box-add" id="add-anexo-btn">
+            +
+          </label>
+        </div>
+
+        <input type="file" id="anexo-input" multiple accept="image/*,audio/*,video/*">
+        <button type="submit" class="botao-principal">Denunciar Anonimamente</button>
+      </form>
+    </div>
+  </main>
+
+  <div id="success-modal" class="modal-overlay">
+    <div class="modal-content">
+      <img class="modal-success-icon" src="../../assets/icon-success.svg" alt="Ícone de Sucesso">
+      <h2>Denúncia Enviada!</h2>
+      <p>Sua denúncia foi registrada com sucesso e encaminhada para análise. Agradecemos sua colaboração.</p>
+      <div class="modal-progress-bar-container">
+        <div class="modal-progress-bar"></div>
+      </div>
+      <button id="close-modal-btn" class="botao-principal">Entendido</button>
+    </div>
+  </div>
+
+  <script src="../../script/denuncia.js"></script>
+  <script src="../../script/script.js"></script>
+</body>
+
+</html>

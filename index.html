@@ -1,133 +1,149 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elas por Elas</title>
-    <link rel="stylesheet" href="../style/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elas por Elas</title>
+  <script>
+    if (sessionStorage.getItem('isLoggedIn') === 'true') {
+      window.location.replace('pages/pt/inicio.html');
+    }
+  </script>
+  <link rel="stylesheet" href="style/global.css">
+  <link rel="stylesheet" href="style/index.css">
+  <link rel="stylesheet" href="style/hamburguer.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <h1>Elas por Elas</h1>
 
-            <button class="hamburger-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-
-            <div class="nav-links">
-                <div class="botoes">
-                    <a href="../pages/login.html"><button id="login">Login</button></a>
-                    <a href="../pages/denuncia-anonima.html"><button id="denuncia">Denúncia Anônima</button></a>
-                    <a href="../pages/quem-somos-index.html"><button id="descricao">Quem somos</button></a>
-                    <a href="../pages/ajuda.index.html"><button id="ajuda">Ajuda</button></a>
-                    <div id="chance_language">
-                        <ul>
-                            <li class="dropdown">
-                                <button><img src="https://flagsapi.com/BR/flat/64.png" alt="Bandeira do Brasil"></button>
-                                <div class="dropdown-menu">
-                                    <a href="../pages(us)/index.html"><img src="https://flagsapi.com/US/flat/64.png" alt="Bandeira dos EUA"></a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="introducao">
-            <img src="../assets/background_elas.jpg" alt="Imagem de fundo com mulher em silhueta">
-            <div class="resumo">
-                <p>
-                    <strong>Elas por Elas</strong> <br>sua força <br> sua segurança <br>a um toque
-                </p>
-            </div>
-        </section>
-
-        <section class="topicos-principal">
-            <h1>Aqui você está protegida</h1>
-            <p>
-                O elas por elas foi criado com um único propósito: garantir a
-                sua segurança. Aqui, você encontra um espaço acolhedor,
-                feito para escutar, apoiar e orientar. Cada funcionalidade
-                foi pensada para que você se sinta segura e amparada em
-                qualquer situação.
-            </p>
-        </section>
-        
-        <section class="topicos-principal">
-            <h1>Realize denúncias rápidas</h1>
-            <p>
-                Sabemos que em momentos de urgência,
-                cada segundo conta. Por isso, oferecemos uma forma simples
-                e rápida de registrar denúncias, com poucos cliques.
-                O processo é direto, seguro e eficiente, garantindo que sua
-                voz seja ouvida sem complicações.
-            </p>
-        </section>
-
-        <section class="topicos-principal">
-              <h1>Busque delegacias mais próximas à você</h1>
-            <p>
-                Encontre facilmente as delegacias e centros de apoio mais
-                próximos da sua localização. Nosso sistema de geolocalização
-                ajuda você a identificar onde buscar ajuda presencial de forma
-                rápida e segura, sempre priorizando sua proteção.
-            </p>
-        </section>
-
-        <section class="topicos-principal">
-              <h1>Denuncie anomimanente, caso não se sinta confortável</h1>
-            <p>
-                Você tem o direito de denunciar sem se expor.
-                Caso prefira manter sua identidade em sigilo, oferecemos a
-                opção de denúncia anônima. Assim, você contribui para combater a
-                violência sem colocar sua segurança em risco.
-            </p>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer">
-            <div class="autores">
-                <h4>Autores</h4>
-                <br>
-                <ul>
-                    <li>Gabriel Pereira</li>
-                    <li>Júlio César</li>
-                    <li>Lucas Nascimento</li>
-                    <li>Maria Eduarda</li>
-                    <li>Nathaly Ferreira</li>
-                </ul>
-            </div>
-
-            <div id="qr-code">
-                <h4>Conheça nosso aplicativo, escaneie o QR code</h4>
-                <img src="../assets/qr_code.png" alt="QR Code para o aplicativo">
-            </div>
-
-            <div id="midia">
-                <h4>Mídia Social</h4>
-                <a href="#"><img src="../assets/github.png" alt="Logo do GitHub"></a>
-                <a href="#"><img src="../assets/linkedin.png" alt="Logo do LinkedIn"></a>
-            </div>
+  <header id="cabecalho">
+    <div class="container">
+      <a href="index.html" class="logo">Elas por Elas</a>
+      <button id="hamburger-btn" aria-label="Abrir menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      <div id="menu-container">
+        <div class="navegacao-superior">
+          <a href="pages/pt/acessar-conta.html" class="botao-acessar" target="_blank">Acessar</a>
+          <nav id="navegacao-secundaria">
+            <ul>
+              <li><a href="pages/pt/denuncia-anonima.html">Denúncia Anônima</a></li>
+              <li><a href="pages/pt/quem-somos.html">Quem Somos</a></li>
+              <li class="idioma"><a href="#">pt-br</a> | <a href="pages/en/index.html">en</a></li>
+              <li><a href="pages/pt/ajuda-deslogado.html"><img src="assets/icon-help.svg" alt="Ícone de Ajuda"></a></li>
+            </ul>
+          </nav>
         </div>
+      </div>
+    </div>
+  </header>
 
-        <hr>
+  <main id="conteudo-principal">
+    <section id="secao-hero" class="secao">
+      <div class="container">
+        <div class="texto-hero">
+          <h1>Sua <strong>FORÇA</strong> e <strong>SEGURANÇA</strong> a um toque de distância</h1>
+          <p>Acreditamos no poder da informação e da união para criar um ambiente mais seguro para todas. "Elas por Elas" é a sua aliada digital, oferecendo recursos essenciais de proteção e uma comunidade de apoio ao seu alcance. Juntas, somos mais fortes.</p>
+        </div>
+        <div class="imagem-hero">
+          <img src="assets/hero-illustration.png" alt="Ilustração de três mulheres com os punhos levantados em sinal de força.">
+        </div>
+      </div>
+    </section>
 
-        <p id="p_footer">
-            Copyright &copy; 2025 |
-            <a href="https://github.com/JulioC3sarDev/Elas-por-Elas">Link GitHub.</a>
-            Todos os direitos reservados.
-        </p>
-    </footer>
+    <section id="secao-funcionalidades" class="secao">
+      <div class="container-grid">
+        <div class="grid-item item-imagem-esquerda">
+          <img src="assets/shield-woman.png" alt="Mulher em pé com a mão para a frente dentro de um escudo de proteção.">
+        </div>
+        <div class="grid-item">
+          <div class="bloco-texto">
+            <h2>Aqui você está protegida</h2>
+            <p>O elas por elas foi criado com um único propósito: garantir a sua segurança. Aqui você encontra um espaço acolhedor, feito para escutar, apoiar e orientar. Cada funcionalidade foi pensada para que você se sinta segura e amparada em qualquer situação.</p>
+          </div>
+          <div class="bloco-texto">
+            <h2>Busque delegacias mais próximas a você</h2>
+            <p>Encontre facilmente as delegacias e centros de apoio mais próximos da sua localização. Nosso sistema de geolocalização ajuda você a identificar onde buscar ajuda presencial de forma rápida e segura, sempre priorizando sua proteção.</p>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="bloco-texto">
+            <h2>Busque delegacias mais próximas a você</h2>
+            <p>Encontre facilmente as delegacias e centros de apoio mais próximos da sua localização. Nosso sistema de geolocalização ajuda você a identificar onde buscar ajuda presencial de forma rápida e segura, sempre priorizando sua proteção.</p>
+          </div>
+          <div class="bloco-texto">
+            <h2>Denuncie anonimamente, caso não se sinta confortável</h2>
+            <p>Você tem o direito de denunciar sem se expor. Caso prefira manter sua identidade em sigilo, oferecemos a opção de denúncia anônima. Assim, você contribui para combater a violência sem colocar sua segurança em risco.</p>
+          </div>
+        </div>
+        <div class="grid-item item-imagem-direita">
+          <img src="assets/reading-woman.png" alt="Mulher sentada em uma poltrona lendo um livro.">
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <script src="../script/global.js"></script>
-    <script src="../script/index.js"></script>
+  <footer id="rodape">
+    <div class="container">
+        <div class="coluna-autores">
+            <h3>AUTORES</h3>
+            <ul>
+                <li class="dropdown-autor">
+                    <button class="dropdown-trigger">Eduarda Santana</button>
+                    <div class="dropdown-content-autor">
+                        <a href="https://github.com/eduard4-sant" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/eduarda-santana-6222b3326/" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a>
+                    </div>
+                </li>
+                <li class="dropdown-autor">
+                    <button class="dropdown-trigger">Gabriel Pereira</button>
+                    <div class="dropdown-content-autor">
+                        <a href="https://github.com/Gabriel05-gif" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/gabriel-pereira0w/" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a>
+                    </div>
+                </li>
+                <li class="dropdown-autor">
+                    <button class="dropdown-trigger">Júlio César</button>
+                    <div class="dropdown-content-autor">
+                        <a href="https://github.com/JulioC3sarDev" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/j%C3%BAlioc%C3%A9sarlk/" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a>
+                    </div>
+                </li>
+                <li class="dropdown-autor">
+                    <button class="dropdown-trigger">Lucas Nascimento</button>
+                    <div class="dropdown-content-autor">
+                        <a href="https://github.com/LNS127" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/lucas-nascimento-dev27/" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a>
+                    </div>
+                </li>
+                <li class="dropdown-autor">
+                    <button class="dropdown-trigger">Nathaly Ferreira</button>
+                    <div class="dropdown-content-autor">
+                        <a href="https://github.com/FSPNathaly" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/nathaly-ferreira-484704232/" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="coluna-qr-code">
+            <h3>CONHEÇA NOSSO APLICATIVO</h3>
+            <img src="assets/qr-code.png" alt="QR Code para baixar o aplicativo.">
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © 2025 Elas por Elas. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script/script.js"></script>
 </body>
+
 </html>

@@ -1,60 +1,121 @@
-function handleFileSelect(event) {
-  const file = event.target.files[0];
-  const label = event.target.closest(".custum-file-upload");
+document.addEventListener("DOMContentLoaded", () => {
+  const anexoInput = document.getElementById("anexo-input");
+  const anexoContainer = document.getElementById("anexos-container");
+  const addAnexoBtn = document.getElementById("add-anexo-btn");
+  const reportForm = document.getElementById("form-denuncia");
+  const successModal = document.getElementById("success-modal");
+  const closeModalBtn = document.getElementById("close-modal-btn");
 
-  if (!file) return;
+  let allFiles = [];
+  const MAX_FILES = 6;
+  let redirectTimeout;
 
-  label.querySelector(".icon").innerHTML = "";
-  label.querySelector(".text").innerHTML = "";
-
-  const fileType = file.type.split("/")[0];
-  const previewContainer = label.querySelector(".icon");
-
-  if (fileType === "image") {
-    const img = document.createElement("img");
-    img.src = URL.createObjectURL(file);
-    img.style.maxWidth = "100%";
-    img.style.maxHeight = "100%";
-    img.style.objectFit = "contain";
-    img.style.borderRadius = "5px";
-    previewContainer.appendChild(img);
-
-    label.querySelector(".text").innerHTML = ``;
-  } else if (fileType === "video") {
-    const video = document.createElement("video");
-    video.src = URL.createObjectURL(file);
-    video.controls = true;
-    video.style.maxWidth = "100%";
-    video.style.maxHeight = "100%";
-    previewContainer.appendChild(video);
-
-    label.querySelector(".text").innerHTML = ``;
-  } else if (fileType === "audio") {
-    const audio = document.createElement("audio");
-    audio.src = URL.createObjectURL(file);
-    audio.controls = true;
-    audio.style.width = "100%";
-    previewContainer.appendChild(audio);
-
-    label.querySelector(".text").innerHTML = ``;
-  } else {
-    previewContainer.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="#4b5563" viewBox="0 0 24 24" width="80px"><path d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM14 15.5C14 14.1193 15.1193 13 16.5 13C17.8807 13 19 14.1193 19 15.5V16V17H20C21.1046 17 22 17.8954 22 19C22 20.1046 21.1046 21 20 21H13C11.8954 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 11 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 10.7909 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z"/></svg>`;
-    label.querySelector(".text").innerHTML = `<span>Tipo não suportado</span>`;
+  if (addAnexoBtn) {
+    addAnexoBtn.addEventListener("click", () => anexoInput.click());
   }
-}
 
-document
-  .querySelectorAll('.custum-file-upload input[type="file"]')
-  .forEach((input) => {
-    input.addEventListener("change", handleFileSelect);
-  });
+  if (anexoInput) {
+    anexoInput.addEventListener("change", (event) => {
+      const newFiles = Array.from(event.target.files);
+      const availableSlots = MAX_FILES - allFiles.length;
 
-document.addEventListener('DOMContentLoaded', () => {
-    const menuHamburger = document.querySelector('.menu-hamburger');
-    const navLinks = document.querySelector('.botoes');
+      if (availableSlots > 0) {
+        allFiles.push(...newFiles.slice(0, availableSlots));
+      }
 
-    menuHamburger.addEventListener('click', () => {
-        menuHamburger.classList.toggle('ativo');
-        navLinks.classList.toggle('ativo');
+      updateAnexoPreviews();
+      anexoInput.value = "";
     });
+  }
+
+  if (reportForm && successModal && closeModalBtn) {
+    reportForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      successModal.classList.add("active");
+
+      redirectTimeout = setTimeout(() => {
+        redirectToPage();
+      }, 5000);
+    });
+
+    closeModalBtn.addEventListener("click", function () {
+      clearTimeout(redirectTimeout);
+      redirectToPage();
+    });
+  }
+
+  function redirectToPage() {
+    if (successModal.classList.contains("active")) {
+      successModal.classList.remove("active");
+    }
+
+    const isLoggedIn = sessionStorage.getItem("isLoggedIn") === "true";
+    const isEnglishPage = window.location.pathname.includes("/en/");
+
+    if (isEnglishPage) {
+      window.location.href = isLoggedIn ? "home.html" : "index.html";
+    } else {
+      window.location.href = isLoggedIn ? "inicio.html" : "../../index.html";
+    }
+  }
+
+  function updateAnexoPreviews() {
+    if (!anexoContainer) return;
+
+    anexoContainer
+      .querySelectorAll(".anexo-preview-wrapper")
+      .forEach((wrapper) => wrapper.remove());
+
+    allFiles.forEach((file, index) => {
+      const wrapper = document.createElement("div");
+      wrapper.className = "anexo-preview-wrapper anexo-box";
+
+      const removerBtn = document.createElement("button");
+      removerBtn.className = "remover-anexo";
+      removerBtn.innerHTML = "&times;";
+      removerBtn.onclick = (e) => {
+        e.stopPropagation();
+        removeFile(index);
+      };
+      wrapper.appendChild(removerBtn);
+
+      if (file.type.startsWith("image/")) {
+        const reader = new FileReader();
+        reader.onload = () => {
+          const img = document.createElement("img");
+          img.src = reader.result;
+          img.className = "anexo-preview-img";
+          wrapper.appendChild(img);
+        };
+        reader.readAsDataURL(file);
+      } else {
+        const fileInfo = document.createElement("div");
+        fileInfo.className = "file-info-preview";
+        const icon = getFileIcon(file.type);
+        fileInfo.innerHTML = `${icon}<span>${file.name}</span>`;
+        wrapper.appendChild(fileInfo);
+      }
+      anexoContainer.insertBefore(wrapper, addAnexoBtn);
+    });
+
+    if (addAnexoBtn) {
+      addAnexoBtn.style.display =
+        allFiles.length >= MAX_FILES ? "none" : "flex";
+    }
+  }
+
+  function removeFile(indexToRemove) {
+    allFiles.splice(indexToRemove, 1);
+    updateAnexoPreviews();
+  }
+
+  function getFileIcon(fileType) {
+    if (fileType.startsWith("audio/")) {
+      return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55c-2.21 0-4 1.79-4 4s1.79 4 4 4s4-1.79 4-4V7h4V3h-6z"/></svg>`;
+    }
+    if (fileType.startsWith("video/")) {
+      return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>`;
+    }
+    return `<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M16.5 6V17.5C16.5 20.2614 14.2614 22.5 11.5 22.5C8.73858 22.5 6.5 20.2614 6.5 17.5V5C6.5 3.067 8.067 1.5 10 1.5C11.933 1.5 13.5 3.067 13.5 5V15.5C13.5 16.6046 12.6046 17.5 11.5 17.5C10.3954 17.5 9.5 16.6046 9.5 15.5V6'/></svg>`;
+  }
 });
